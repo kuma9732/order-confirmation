@@ -23,7 +23,7 @@ $(function(){
                 let order_company = value.company,
                  order_department = value.department,
                        order_name = value.name,
-                      order_mail = value.mail,
+                       order_mail = value.mail,
                        order_tell = value.tell,
                       order_total = value.total,
                    total_products = value.products;
@@ -48,7 +48,6 @@ $(function(){
 
             $('.append-orders').html(orders);
         }
-
     });
 
     $(document).on('click', '.order-text', function(){
