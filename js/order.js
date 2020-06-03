@@ -9,8 +9,8 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
 $(function(){
-    const database = firebase.database();
-      const orders = database.ref('orders/');
+    const database = firebase.database(),
+        orders = database.ref('orders/');
 
     /* --------------------------------
     * Orders From DB
@@ -38,7 +38,7 @@ $(function(){
                                 <div class="order-details">
                                     <div class="order-total">合計金額 : ${order_total}円</div>`;
                     $.each(total_products, function(key,value){
-                        orders += `<div>${value.size} / ${value.voltage} / ${value.capacitance}</div>
+                        orders += `<div>${value.category} / ${value.size} / ${value.voltage} / ${value.capacitance}</div>
                                    <div>${value.price}</div>`
                     });
 
@@ -55,4 +55,3 @@ $(function(){
         $(this).next('.order-details').slideToggle();
     });
 });
-
